@@ -3,7 +3,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDwCAHYDf4GvOEXAH01LbzOF8IQamnBtQU",
   authDomain: "restraunt-ordering-sys.firebaseapp.com",
   projectId: "restraunt-ordering-sys",
-  storageBucket: "restraunt-ordering-sys.firebasestorage.app",
+  storageBucket: "restraunt-ordering-sys.appspot.com",
   messagingSenderId: "800176717696",
   appId: "1:800176717696:web:f46757cbf8b4502a490b65",
   measurementId: "G-3K4KH81Z0N"
