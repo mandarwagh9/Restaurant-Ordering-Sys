@@ -1,14 +1,13 @@
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDwCAHYDf4GvOEXAH01LbzOF8IQamnBtQU",
+  apiKey: "AIzaSyDwCAHYDf4GvOEXAH01LbzOF8IQamnBtQU",  // Replace this with a new restricted key
   authDomain: "restraunt-ordering-sys.firebaseapp.com",
   projectId: "restraunt-ordering-sys",
-  storageBucket: "restraunt-ordering-sys.appspot.com",
+  storageBucket: "restraunt-ordering-sys.appspot.com",  // Fixed this
   messagingSenderId: "800176717696",
   appId: "1:800176717696:web:f46757cbf8b4502a490b65",
   measurementId: "G-3K4KH81Z0N"
 };
-  
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
