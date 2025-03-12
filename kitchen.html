@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen View - Restaurant Ordering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="text-center mb-4">
+            <h1>Kitchen View</h1>
+            <nav class="mb-3">
+                <a href="index.html" class="btn btn-outline-secondary btn-sm">Back to Home</a>
+            </nav>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3>Incoming Orders</h3>
+                        <div>
+                            <select id="orderFilter" class="form-select form-select-sm">
+                                <option value="all">All Orders</option>
+                                <option value="new">New</option>
+                                <option value="preparing">Preparing</option>
+                                <option value="ready">Ready</option>
+                                <option value="served">Served</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="ordersContainer">
+                            <!-- Orders will be loaded here -->
+                            <div class="text-center py-5" id="noOrdersMessage">
+                                <h4 class="text-muted">No orders yet</h4>
+                                <p class="text-muted">New orders will appear here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- New Order Sound -->
+    <audio id="newOrderSound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3"></audio>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="kitchen.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ordering System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="text-center mb-4">
+            <h1>Restaurant Ordering System</h1>
+            <div class="btn-group mt-3">
+                <button onclick="location.href='customer.html'" class="btn btn-primary">Customer View</button>
+                <button onclick="location.href='kitchen.html'" class="btn btn-success">Kitchen View</button>
+                <button onclick="location.href='cashier.html'" class="btn btn-warning">Cashier View</button>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>System Overview</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>This prototype demonstrates a restaurant ordering system with three main views:</p>
+                        <ul>
+                            <li><strong>Customer View:</strong> For customers to browse menu, place orders, and view order status</li>
+                            <li><strong>Kitchen View:</strong> For kitchen staff to receive orders and update their status</li>
+                            <li><strong>Cashier View:</strong> For front-of-house staff to manage orders and payments</li>
+                        </ul>
+                        <p>To test the system:</p>
+                        <ol>
+                            <li>Start by entering a table number in the Customer View</li>
+                            <li>Place an order as a customer</li>
+                            <li>Switch to Kitchen View to see and update the order</li>
+                            <li>Switch to Cashier View to mark the order as served and process payment</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
