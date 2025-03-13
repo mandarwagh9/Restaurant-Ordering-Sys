@@ -6,6 +6,29 @@
     <title>Kitchen View - Restaurant Ordering</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .kitchen-order {
+            transition: all 0.3s ease;
+        }
+        .kitchen-order.new {
+            border-left: 5px solid #dc3545;
+        }
+        .kitchen-order.preparing {
+            border-left: 5px solid #ffc107;
+        }
+        .kitchen-order.ready {
+            border-left: 5px solid #0d6efd;
+        }
+        .kitchen-order.served {
+            border-left: 5px solid #198754;
+            opacity: 0.7;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-4">
@@ -17,14 +40,14 @@
         </div>
         
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="card mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h3>Incoming Orders</h3>
+                        <h3>Orders</h3>
                         <div>
                             <select id="orderFilter" class="form-select form-select-sm">
                                 <option value="all">All Orders</option>
-                                <option value="new">New</option>
+                                <option value="new">New Orders</option>
                                 <option value="preparing">Preparing</option>
                                 <option value="ready">Ready</option>
                                 <option value="served">Served</option>
@@ -33,11 +56,11 @@
                     </div>
                     <div class="card-body">
                         <div id="ordersContainer">
-                            <!-- Orders will be loaded here -->
-                            <div class="text-center py-5" id="noOrdersMessage">
-                                <h4 class="text-muted">No orders yet</h4>
-                                <p class="text-muted">New orders will appear here</p>
-                            </div>
+                            <!-- Orders will be dynamically added here -->
+                        </div>
+                        <div class="text-center py-5" id="noOrdersMessage" style="display: none;">
+                            <h4 class="text-muted">No orders to display</h4>
+                            <p class="text-muted">New orders will appear here once placed</p>
                         </div>
                     </div>
                 </div>
@@ -45,8 +68,8 @@
         </div>
     </div>
     
-    <!-- New Order Sound -->
-    <audio id="newOrderSound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3"></audio>
+    <!-- Audio for new order notification -->
+    <audio id="newOrderSound" src="notification.mp3"></audio>
     
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>

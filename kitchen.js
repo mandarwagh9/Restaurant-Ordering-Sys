@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             itemElement.innerHTML = `
                 <div>
                     <h6 class="mb-0">${item.name}</h6>
-                    <small class="text-muted">${item.description}</small>
+                    <small class="text-muted">${item.description || ''}</small>
                 </div>
                 <span class="badge bg-secondary rounded-pill">${item.quantity}</span>
             `;
@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'ready':
                 actionButtons.innerHTML = `
-                    <button class="btn btn-success serve-btn" data-order-id="${order.orderId}" disabled>
-                        Waiting for Serving
+                    <button class="btn btn-success serve-btn" data-order-id="${order.orderId}">
+                        Mark as Served
                     </button>
                 `;
                 break;
@@ -179,6 +179,11 @@ document.addEventListener('DOMContentLoaded', function() {
             readyBtn.addEventListener('click', function() {
                 updateOrderStatus(this.getAttribute('data-order-id'), 'ready');
             });
+        } else if (order.status === 'ready') {
+            const serveBtn = orderCard.querySelector('.serve-btn');
+            serveBtn.addEventListener('click', function() {
+                updateOrderStatus(this.getAttribute('data-order-id'), 'served');
+            });
         }
         
         // Add order card to container
@@ -189,6 +194,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateOrderStatus(orderId, newStatus) {
         database.ref('orders/' + orderId).update({
             status: newStatus
+        })
+        .then(() => {
+            console.log(`Order ${orderId} updated to ${newStatus}`);
         })
         .catch((error) => {
             console.error("Error updating order status:", error);

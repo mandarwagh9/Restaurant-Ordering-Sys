@@ -1,29 +1,23 @@
 // ✅ Firebase Configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-<<<<<<< HEAD
   apiKey: "AIzaSyDwCAHYDf4GvOEXAH01LbzOF8IQamnBtQU",
   authDomain: "restraunt-ordering-sys.firebaseapp.com",
   databaseURL: "https://restraunt-ordering-sys-default-rtdb.firebaseio.com",
   projectId: "restraunt-ordering-sys",
   storageBucket: "restraunt-ordering-sys.firebasestorage.app",
-=======
   apiKey: "AIzaSyDwCAHYDf4GvOEXAH01LbzOF8IQamnBtQU",  // Replace this with a new restricted key
   authDomain: "restraunt-ordering-sys.firebaseapp.com",
   projectId: "restraunt-ordering-sys",
   storageBucket: "restraunt-ordering-sys.appspot.com",  // Fixed this
->>>>>>> 22ee4f450ca8ae6848938c1a3ef23454e5eafe31
   messagingSenderId: "800176717696",
   appId: "1:800176717696:web:f46757cbf8b4502a490b65",
   measurementId: "G-3K4KH81Z0N"
 };
-<<<<<<< HEAD
 
 // ✅ Initialize Firebase (Avoid Duplicate Initialization)
 if (!firebase.apps.length) {
-=======
   // Initialize Firebase
->>>>>>> 22ee4f450ca8ae6848938c1a3ef23454e5eafe31
   firebase.initializeApp(firebaseConfig);
 } else {
   firebase.app(); // 🔄 Use existing Firebase instance
@@ -45,7 +39,6 @@ firebase.database().ref(".info/connected").on("value", function(snapshot) {
   } else {
       console.warn("⚠️ Not connected to Firebase");
   }
-<<<<<<< HEAD
 });
 
 // ✅ Test Database Connection (Optional)
@@ -57,7 +50,6 @@ database.ref('test').set({ message: "Firebase is working!" })
 firestore.collection("test").add({ message: "Firestore is working!" })
   .then(() => console.log("✅ Test data written to Firestore"))
   .catch(error => console.error("❌ Firestore error:", error));
-=======
   
   // Order validator schema
   const orderSchema = {
@@ -320,4 +312,3 @@ firestore.collection("test").add({ message: "Firestore is working!" })
     restoreDatabase,
     pushValidatedOrder
   };
->>>>>>> 22ee4f450ca8ae6848938c1a3ef23454e5eafe31
