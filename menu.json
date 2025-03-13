@@ -1,0 +1,81 @@
+{
+    "starters": {
+      "item1": {
+        "name": "Garlic Bread",
+        "description": "Freshly baked bread with garlic butter",
+        "price": 4.99,
+        "image": "https://via.placeholder.com/150?text=Garlic+Bread",
+        "category": "starters"
+      },
+      "item2": {
+        "name": "Mozzarella Sticks",
+        "description": "Crispy breaded mozzarella with marinara sauce",
+        "price": 6.99,
+        "image": "https://via.placeholder.com/150?text=Mozzarella+Sticks",
+        "category": "starters"
+      }
+    },
+    "mains": {
+      "item1": {
+        "name": "Margherita Pizza",
+        "description": "Classic pizza with tomatoes, mozzarella, and basil",
+        "price": 12.99,
+        "image": "https://via.placeholder.com/150?text=Margherita+Pizza",
+        "category": "mains"
+      },
+      "item2": {
+        "name": "Spaghetti Bolognese",
+        "description": "Spaghetti with rich meat sauce",
+        "price": 14.99,
+        "image": "https://via.placeholder.com/150?text=Spaghetti+Bolognese",
+        "category": "mains"
+      },
+      "item3": {
+        "name": "Grilled Salmon",
+        "description": "Fresh salmon with seasonal vegetables",
+        "price": 18.99,
+        "image": "https://via.placeholder.com/150?text=Grilled+Salmon",
+        "category": "mains"
+      }
+    },
+    "desserts": {
+      "item1": {
+        "name": "Tiramisu",
+        "description": "Classic Italian dessert with coffee and mascarpone",
+        "price": 6.99,
+        "image": "https://via.placeholder.com/150?text=Tiramisu",
+        "category": "desserts"
+      },
+      "item2": {
+        "name": "Chocolate Cake",
+        "description": "Rich chocolate cake with ganache",
+        "price": 5.99,
+        "image": "https://via.placeholder.com/150?text=Chocolate+Cake",
+        "category": "desserts"
+      }
+    },
+    "drinks": {
+      "item1": {
+        "name": "House Wine",
+        "description": "Red or white wine, glass",
+        "price": 7.99,
+        "image": "https://via.placeholder.com/150?text=House+Wine",
+        "category": "drinks"
+      },
+      "item2": {
+        "name": "Soft Drink",
+        "description": "Cola, lemon, orange",
+        "price": 2.99,
+        "image": "https://via.placeholder.com/150?text=Soft+Drink",
+        "category": "drinks"
+      },
+      "item3": {
+        "name": "Sparkling Water",
+        "description": "500ml bottle",
+        "price": 3.49,
+        "image": "https://via.placeholder.com/150?text=Sparkling+Water",
+        "category": "drinks"
+      }
+    }
+  }
+  
